@@ -1,0 +1,13 @@
+[user]
+	name = Jonathan Pliske
+	email = jonpliske@gmail.com
+[credential]
+	helper = osxkeychain
+[color]
+	ui = auto
+[alias]
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[core]
+	editor = /usr/bin/vim
+[push]
+	default = simple
