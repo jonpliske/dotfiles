@@ -9,5 +9,6 @@ alias gdi="g diff"
 alias gdic="g diff --cached"
 
 alias curli="curl -s -i"
+alias curnul="curl -s -v -o /dev/null"
 
 alias hls="hadoop fs -ls"
