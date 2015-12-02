@@ -1,5 +1,6 @@
-if [[ $(uname) != "Darwin" ]]; then exit
+if [[ $(uname) != "Darwin" ]]; then
+  exit 0
+fi
 
-echo "DARWIN"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
