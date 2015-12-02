@@ -8,7 +8,7 @@ git_clone_take () {
     return 1
   fi
 
-  if [[ $repo_url =~ '([^\/]+)(.git|\/)?$' && $match[1] ]]; then
+  if [[ $repo_url =~ '([^\/.]+)(.git|\/)?$' && $match[1] ]]; then
     cd $match[1]
   else
     echo "Unable to extract repo directory from $repo_url"
