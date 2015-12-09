@@ -1,3 +1,7 @@
+echo "creating a zgen save"
+ZGEN_LOADED=()
+ZGEN_COMPLETIONS=()
+
 zgen oh-my-zsh
 
 # If zsh-syntax-highlighting is bundled after zsh-history-substring-search,
@@ -27,3 +31,29 @@ zgen load skx/sysadmin-util
 
 # Adds aliases to open your current repo & branch on github.
 zgen load peterhurford/git-it-on.zsh
+
+# Tom Limoncelli's tooling for storing private information (keys, etc)
+# in a repository securely by encrypting them with gnupg
+zgen load StackExchange/blackbox
+
+zgen oh-my-zsh plugins/sudo
+zgen oh-my-zsh plugins/git
+zgen oh-my-zsh plugins/rsync
+zgen oh-my-zsh plugins/screen
+zgen oh-my-zsh plugins/github
+
+# Docker completion
+zgen load srijanshetty/docker-zsh
+
+# Load me last
+GENCOMPL_FPATH=$HOME/.zsh/complete
+
+# Very cool plugin that generates zsh completion functions for commands
+# if they have getopt-style help text.
+zgen load RobSis/zsh-completion-generator
+
+# Bullet train prompt setup
+# zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+zgen load ~/dotfiles/agnoster-modified
+
+zgen save
