@@ -12,6 +12,7 @@ git_clone_take () {
     cd $match[1]
   else
     echo "Unable to extract repo directory from $repo_url"
+    return 1
   fi
 }
 
