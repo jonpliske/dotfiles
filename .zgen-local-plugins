@@ -42,6 +42,11 @@ zgen oh-my-zsh plugins/rsync
 zgen oh-my-zsh plugins/screen
 zgen oh-my-zsh plugins/github
 
+zgen load chrissicool/zsh-256color
+
+# Load more completion files for zsh from the zsh-lovers github repo
+zgen load zsh-users/zsh-completions src
+
 # Docker completion
 zgen load srijanshetty/docker-zsh
 
