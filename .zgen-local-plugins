@@ -57,6 +57,10 @@ GENCOMPL_FPATH=$HOME/.zsh/complete
 # if they have getopt-style help text.
 zgen load RobSis/zsh-completion-generator
 
+# k is a zsh script / plugin to make directory listings more readable,
+# adding a bit of color and some git status information on files and directories
+zgen load rimraf/k
+
 # Bullet train prompt setup
 # zgen load caiogondim/bullet-train-oh-my-zsh-theme bullet-train
 zgen load ~/dotfiles/agnoster-modified
