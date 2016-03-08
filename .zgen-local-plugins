@@ -40,7 +40,17 @@ zgen oh-my-zsh plugins/sudo
 zgen oh-my-zsh plugins/git
 zgen oh-my-zsh plugins/rsync
 zgen oh-my-zsh plugins/screen
+zgen oh-my-zsh plugins/tmux
 zgen oh-my-zsh plugins/github
+zgen oh-my-zsh plugins/urltools
+
+if [[ $(uname) == "Darwin" ]]; then
+  zgen oh-my-zsh plugins/brew
+  zgen oh-my-zsh plugins/sublime
+  zgen oh-my-zsh plugins/osx
+  zgen oh-my-zsh plugins/sbt
+  zgen oh-my-zsh plugins/scala
+fi
 
 zgen load chrissicool/zsh-256color
 
