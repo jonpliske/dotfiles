@@ -10,5 +10,6 @@
 [core]
 	editor = /usr/bin/vim
 	excludesFile = /Users/jonathan/.gitignore
+	excludesfiles = /Users/jonathan/code/dotfiles/git/gitignore
 [push]
 	default = simple

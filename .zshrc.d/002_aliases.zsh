@@ -12,3 +12,9 @@ alias curli="curl -s -i"
 alias curnul="curl -s -v -o /dev/null"
 
 alias hls="hadoop fs -ls"
+
+alias venv="virtualenv .venv"
+alias venva="source ./.venv/bin/activate"
+alias venvd="source ./.venv/bin/deactivate"
+alias pipreq="pip install -r ./requirements.txt"
+alias venvinit="venv && venva && pipreq"

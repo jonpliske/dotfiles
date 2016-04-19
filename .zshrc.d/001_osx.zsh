@@ -8,3 +8,8 @@ if which jenv &> /dev/null; then
   export PATH="$HOME/.jenv/bin:$PATH"
   eval "$(jenv init -)"
 fi
+
+if which rbenv &> /dev/null; then
+  export PATH="$HOME/.rbenv/shims:$PATH"
+  eval "$(rbenv rehash)"
+fi
