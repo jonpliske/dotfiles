@@ -21,4 +21,3 @@ alias venva="source ./.venv/bin/activate"
 alias venvd="source ./.venv/bin/deactivate"
 alias pipreq="pip install -r ./requirements.txt"
 alias venvinit="venv && venva && pipreq"
-
