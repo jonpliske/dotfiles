@@ -24,19 +24,23 @@ URxvt.fading:               0
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.saveLines:            50
+URxvt.saveLines:            4096
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
 !URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1
-URxvt*font: xft:DejaVuSansMono:pixelsize=12:antialias=true:hinting=true
-!URxvt*font: xft:AnonymousProB:pixelsize=12:antialias=false:hinting=true
-URxvt*boldFont: xft:DejaVuSansMono-Bold:pixelsize=12:antialias=true:hinting=true
+!URxvt*font: xft:DejaVuSansMono:pixelsize=12:antialias=true:hinting=true
+!URxvt*boldFont: xft:DejaVuSansMono:pixelsize=12:antialias=true:hinting=true:style=bold
+!URxvt*font: xft:Inconsolata:pixelsize=11:antialias=true:hinting=true
+!URxvt*boldFont: xft:Inconsolata:pixelsize=11:antialias=true:hinting=true:style=Bold
+URxvt*font: xft:Source\ Code\ Pro:pixelsize=12:antialias=true:hinting=true:style=Semibold,FontAwesome:pixelsize=12
+URxvt*boldFont: xft:Source\ Code\ Pro:pixelsize=12:antialias=true:hinting=true:style=Bold,FontAwesome:pizelsize=12
+
 
 ! Fix font space
-!URxvt*letterSpace: -1
+URxvt*letterSpace: -1
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
@@ -96,3 +100,13 @@ URxvt.pointerBlank:         true
 !! white dark/light
 *color7: #eee8d5
 *color15: #fdf6e3
+
+rofi.color-enabled: true
+rofi.color-window: #131313, #131313, #0F73FB
+rofi.color-normal: #131313, #D6DAE4, #131313, #202020, #0F73FB
+rofi.color-active: #131313, #2CC55D, #131313, #202020, #2CC55D
+rofi.color-urgent: #131313, #F71118, #131313, #202020, #DA4281
+
+rofi.opacity: 97
+rofi.font: Noto Sans 16
+
