@@ -30,6 +30,9 @@ set guioptions-=LlRrbm
 let base16colorspace=256
 colorscheme base16-materia
 
+" fix background when running in termite (and screen/tmux?)
+set t_ut=
+
 set wrap
 set number
 set softtabstop=2 shiftwidth=4
