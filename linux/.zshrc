@@ -27,6 +27,9 @@ if [ "#TERM" ]; then
     esac
 fi
 
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
 export EDITOR=/usr/bin/vim
 
 alias ls="ls --color"
