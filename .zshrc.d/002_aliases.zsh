@@ -1,4 +1,5 @@
 alias g="nocorrect git"
+alias ga="g add"
 alias gc="g commit -a -m"
 alias gs="g status --short"
 alias gpr="g pull --rebase"
