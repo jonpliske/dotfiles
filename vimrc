@@ -10,6 +10,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
@@ -28,7 +29,8 @@ set guioptions-=LlRrbm
 
 " base16 color theme
 let base16colorspace=256
-colorscheme base16-materia
+colorscheme base16-eighties
+let g:airline_theme='base16_eighties'
 
 " fix background when running in termite (and screen/tmux?)
 set t_ut=
