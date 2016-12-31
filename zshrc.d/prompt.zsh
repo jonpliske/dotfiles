@@ -16,8 +16,8 @@ _check_zsh_prompt() {
 if [ "#TERM" ]; then
     case $TERM in
     xterm*)
-        prompt_check=$( _check_zsh_prompt pure )
-      if [[ -n prompt_check ]]; then
+      prompt_check=$( _check_zsh_prompt pure )
+      if [[ $? -eq 0 ]]; then
         prompt pure
       else
         prompt redhat
