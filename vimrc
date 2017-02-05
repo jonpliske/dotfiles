@@ -19,6 +19,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'mileszs/ack.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'chriskempson/base16-vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
