@@ -24,6 +24,9 @@ Plugin 'fatih/vim-go'
 Plugin 'Raimondi/delimitMate'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'Matt-Deacalion/vim-systemd-syntax'
+Plugin 'fatih/vim-hclfmt'
+
 
 if has('nvim')
     Plugin 'Shougo/deoplete.nvim'
@@ -32,15 +35,7 @@ endif
 call vundle#end()
 filetype plugin indent on
 
-" base16 color theme
-let base16colorspace=256
-colorscheme base16-eighties
-let g:airline_theme='base16_eighties'
-
-" fix background when running in termite (and screen/tmux?)
-set t_ut=
-
-" from: github.com/jessfraz/.vim/blob/master/vimrc
+" from: http://github.com/jessfraz/.vim/blob/master/vimrc
 set noerrorbells
 set number
 set backspace=indent,eol,start
@@ -175,11 +170,26 @@ if has('gui_running')
     set regexpengine=1
     syntax enable
 endif
-set background=dark
+"set background=dark
 "let g:solarized_termcolors=256
 "let g:solarized_termtrans=1
+
 "colorscheme solarized
-set guifont=Inconsolata:h15
+"set guifont=Inconsolata:h15
+
+" base16 color theme
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+let base16colorspace=256
+colorscheme base16-eighties
+let g:airline_theme='base16_eighties'
+
+" fix background when running in termite (and screen/tmux?)
+set t_ut=
+
 set guioptions-=L
 
 " This comes first, because we have mappings that depend on leader
