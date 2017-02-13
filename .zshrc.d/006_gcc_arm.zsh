@@ -1,0 +1,1 @@
+[[ -d /usr/local/gcc-arm-none-eabi/bin ]] && PATH=$PATH:/usr/local/gcc-arm-none-eabi/bin
