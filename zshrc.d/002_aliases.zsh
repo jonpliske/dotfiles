@@ -8,6 +8,7 @@ alias gco="g checkout"
 alias gcp="g cherry-pick"
 alias gdi="g diff"
 alias gdic="g diff --cached"
+alias gf="g fetch"
 
 alias curli="curl -s -i"
 alias curnul="curl -s -v -o /dev/null"
