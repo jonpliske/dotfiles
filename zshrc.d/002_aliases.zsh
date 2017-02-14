@@ -9,6 +9,7 @@ alias gcp="g cherry-pick"
 alias gdi="g diff"
 alias gdic="g diff --cached"
 alias gf="g fetch"
+alias gcm="g checkout master"
 
 alias curli="curl -s -i"
 alias curnul="curl -s -v -o /dev/null"
@@ -21,4 +22,3 @@ alias venvd="source ./.venv/bin/deactivate"
 alias pipreq="pip install -r ./requirements.txt"
 alias venvinit="venv && venva && pipreq"
 
-unalias make
