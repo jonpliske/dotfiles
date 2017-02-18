@@ -26,6 +26,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'fatih/vim-hclfmt'
+Plugin 'godlygeek/tabular'
 
 
 if has('nvim')
