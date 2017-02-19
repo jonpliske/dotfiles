@@ -9,7 +9,6 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 [core]
 	editor = /usr/bin/vim
-	excludesFile = /Users/jonathan/.gitignore
-	excludesfiles = /Users/jonathan/code/dotfiles/git/gitignore
+	excludesFile = ~/.config/git/ignore
 [push]
 	default = simple
