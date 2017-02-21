@@ -10,6 +10,7 @@ alias gdi="g diff"
 alias gdic="g diff --cached"
 alias gf="g fetch"
 alias gcm="g checkout master"
+alias gcb="g checkout -b"
 
 alias curli="curl -s -i"
 alias curnul="curl -s -v -o /dev/null"
