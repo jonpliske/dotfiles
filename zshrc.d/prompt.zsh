@@ -15,7 +15,7 @@ _check_zsh_prompt() {
 
 if [ "#TERM" ]; then
     case $TERM in
-    xterm*)
+    xterm|screen*)
       prompt_check=$( _check_zsh_prompt pure )
       if [[ $? -eq 0 ]]; then
         prompt pure
