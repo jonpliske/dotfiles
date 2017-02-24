@@ -1,4 +1,4 @@
-export EDITOR=/usr/bin/nvim
+export EDITOR=nvim
 
 [[ -s /etc/profile.d/autojump.zsh ]] && . /etc/profile.d/autojump.zsh
 
