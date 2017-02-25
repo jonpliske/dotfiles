@@ -8,3 +8,6 @@ if [ -d $HOME/.zshrc.d ]; then
     done
 fi
 
+[[ -s /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+    . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
