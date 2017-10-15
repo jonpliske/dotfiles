@@ -229,6 +229,7 @@ bindsym $mod+shift+b border toggle
 bindsym $mod+m move scratchpad
 bindsym $mod+o scratchpad show
 
+
 exec --no-startup-id compton -CGb
-exec --no-startup-id feh --bg-fill /home/unacceptional/Pictures/Solarized-Mountains.png
+exec --no-startup-id feh --bg-fill ~/background.jpg
 
