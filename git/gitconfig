@@ -12,3 +12,5 @@
 	excludesFile = ~/.config/git/ignore
 [push]
 	default = simple
+[status]
+	submoduleSummary = true
