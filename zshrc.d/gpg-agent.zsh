@@ -6,7 +6,7 @@ if [[ $(uname) == "Darwin" ]]; then
       export SSH_AUTH_SOCK
       export SSH_AGENT_PID
   else
-      eval $(gpg-agent --quiet --debug-level 0 --daemon --log-file /dev/null --write-env-file ~/.gnupg/.gpg-agent-info)
+      eval $(gpg-agent --quiet --debug-level 0 --daemon --log-file /dev/null)
   fi
 else
   export GPG_TTY=$(tty)
