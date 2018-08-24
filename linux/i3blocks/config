@@ -72,9 +72,9 @@ interval=30
 # BATTERY #
 ###########
 
-#[battery]
-#label=
-#interval=60
+[battery]
+label=
+interval=60
 
 
 ##########
