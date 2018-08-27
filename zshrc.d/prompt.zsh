@@ -13,6 +13,8 @@ _check_zsh_prompt() {
   return 1
 }
 
+PURE_GIT_PULL=0
+
 if [ "#TERM" ]; then
     case $TERM in
     xterm*|screen*)
