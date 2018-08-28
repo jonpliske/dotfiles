@@ -10,3 +10,10 @@
 "pamixer --toggle-mute"
   XF86AudioMute
 
+# Backlight
+"xbacklight -inc 10"
+  XF86MonBrightnessUp
+
+"xbacklight -dec 10"
+  XF86MonBrightnessDown
+
