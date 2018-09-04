@@ -33,3 +33,8 @@ alias kcd="kc describe"
 alias kgp="kc get pods"
 alias kgd="kc get deployments"
 alias kbox="kubectl run -i --tty busybox --image=busybox --restart=Never -- sh"
+
+alias path='echo $PATH | tr -s ":" "\n"'
+
+alias ll="ls -al"
+alias mkdir="mkdir -p"
