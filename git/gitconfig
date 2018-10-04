@@ -1,8 +1,6 @@
 [user]
 	name = Jonathan Pliske
-	email = jpliske@groupon.com
-[credential]
-	helper = osxkeychain
+	email = jonpliske@gmail.com
 [color]
 	ui = auto
 [alias]

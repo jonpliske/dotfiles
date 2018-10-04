@@ -72,9 +72,9 @@ interval=30
 # BATTERY #
 ###########
 
-#[battery]
-#label=
-#interval=60
+[battery]
+label=
+interval=60
 
 
 ##########
@@ -83,13 +83,13 @@ interval=30
 
 [wifi]
 label=
-instance=wifi0
-command=ip addr show wifi0 | perl -n -e'/inet (.+)\// && print $1'
+instance=wlan0
+command=ip addr show wlan0 | perl -n -e'/inet (.+)\// && print $1'
 interval=10
 separator=false
 
 [bandwidth]
-instance=wifi0
+instance=wlan0
 interval=1
 min_width=IN IN 99K OUT 99K
 align=center

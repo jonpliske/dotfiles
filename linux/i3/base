@@ -11,6 +11,9 @@
 
 new_window pixel 1
 
+gaps inner 20
+gaps outer 5
+
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -21,7 +24,7 @@ set $mod Mod1
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-font pango: Noto Sans 10, FontAwesome 10
+font pango: FontAwesome, Noto Sans 14
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -185,7 +188,7 @@ bar {
 
     position top
     status_command i3blocks
-    font pango: Noto Sans 10. FontAwesome 10
+    font pango: FontAwesome, Hack 14
 }
 
 #colors {
@@ -201,14 +204,15 @@ bar {
 #	}
 
 # binds
-bindsym $mod+shift+x exec i3lock-fancy -gf Noto-Sans
-bindsym $mod+shift+d exec rofi -show run
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+shift+x exec i3lock-fancy -pf Hack-Bold -t 'stop all the downloadin' -- scrot
+bindsym $mod+shift+d exec rofi --combi-modi window#drun#ssh -show combi -font "hack 14" -theme base16-eighties
+bindsym $mod+d exec rofi -modi drun -show drun -font "hack 14" -theme base16-eighties
 bindsym $mod+shift+b border toggle
 bindsym $mod+m move scratchpad
 bindsym $mod+o scratchpad show
 
 
 exec --no-startup-id compton -CGb
-exec --no-startup-id feh --bg-fill /home/unacceptional/Pictures/Solarized-Mountains.png
+exec --no-startup-id feh --bg-fill ~/wallpaper/current
 
+exec_always --no-startup-id xautolock -time 5 -locker "i3lock-fancy -pf Hack-Bold -t 'stop all the downloadin' -- scrot"
