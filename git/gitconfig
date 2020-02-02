@@ -12,3 +12,7 @@
 	default = simple
 [status]
 	submoduleSummary = true
+[includeIf "gitdir:~/work/"]
+	path = .gitconfig-work
+[includeIf "gitdir:~/go/src/groupon.github.com/"]
+	path = .gitconfig-work
