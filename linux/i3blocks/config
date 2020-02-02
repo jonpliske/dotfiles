@@ -24,7 +24,8 @@
 #
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
-command=/usr/lib/i3blocks/$BLOCK_NAME
+#command=/usr/lib/i3blocks/$BLOCK_NAME
+command=/home/jbp/src/i3blocks-contrib/$BLOCK_NAME/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
@@ -98,15 +99,22 @@ align=center
 #instance=wlp2s0
 #interval=5
 
+[vpn]
+label=
+instance=vpn
+command=ip addr show vpn | perl -n -e'/inet (.+)\// && print $1'
+interval=10
+separator=false
+
 [ethernet]
 label=
-instance=eno1
-command=ip addr show eno1 | perl -n -e'/inet (.+)\// && print $1'
+instance=eth1
+command=ip addr show eth1 | perl -n -e'/inet (.+)\// && print $1'
 interval=10
 separator=false
 
 [bandwidth]
-instance=eno1
+instance=eth1
 interval=1
 min_width=IN IN 99K OUT 99K
 align=center
