@@ -36,5 +36,6 @@ alias kbox="kubectl run -i --tty busybox --image=busybox --restart=Never -- sh"
 
 alias path='echo $PATH | tr -s ":" "\n"'
 
+alias ls="nocorrect exa"
 alias ll="ls -al"
 alias mkdir="mkdir -p"
