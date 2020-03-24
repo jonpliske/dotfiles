@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-new_window pixel 1
+default_border pixel 1
 
 for_window [class="^.*"] border pixel 2
 gaps inner 15
@@ -174,7 +174,7 @@ bar {
 
     position top
     status_command i3blocks
-    font pango: FontAwesome, Hack 14
+    font pango: FontAwesome, Hack 10
 }
 
 # binds

@@ -30,7 +30,7 @@ set $base0F #d27b53
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-new_window pixel 1
+default_border pixel 1
 
 for_window [class="^.*"] border pixel 2
 gaps inner 15
@@ -195,7 +195,7 @@ bar {
 
     position top
     status_command i3blocks
-    font pango: FontAwesome, Hack 14
+    font pango: FontAwesome, Hack 10
 }
 
 # binds
@@ -207,7 +207,7 @@ bindsym $mod+m move scratchpad
 bindsym $mod+o scratchpad show
 
 
-exec --no-startup-id picom -CGb
+exec --no-startup-id compton -CGb
 exec --no-startup-id feh --bg-fill ~/wallpaper/current
 
 exec_always --no-startup-id xautolock -time 5 -locker "i3lock-fancy -pf Hack-Bold -t 'stop all the downloadin' -- scrot"
