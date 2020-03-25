@@ -11,6 +11,9 @@ fi
 # linux (arch/pacman) zsh-syntax-highlighting
 [[ -s /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
     . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# linux (fedora) zsh-syntax-highlighting
+[[ -s /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+    . /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # os x (brew) zsh-syntax-highlighting
 [[ -s /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
     . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
