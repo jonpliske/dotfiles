@@ -17,7 +17,7 @@ PURE_GIT_PULL=0
 
 if [ "#TERM" ]; then
     case $TERM in
-    xterm*|screen*)
+	    xterm*|screen*|alacritty*)
       prompt_check=$( _check_zsh_prompt pure )
       if [[ $? -eq 0 ]]; then
         prompt pure
