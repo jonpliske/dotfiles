@@ -30,7 +30,8 @@ Plugin 'godlygeek/tabular'
 Plugin 'elmcast/elm-vim'
 Plugin 'hashivim/vim-terraform'
 
-let g:python3_host_prog = '/home/jbp/.pyenv/versions/neovim3/bin/python'
+let g:python_host_prog = $HOME . '/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
 
 if has('nvim')
     Plugin 'Shougo/deoplete.nvim'
