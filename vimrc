@@ -186,11 +186,9 @@ endif
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
+  let g:airline_theme = 'base16_' . $BASE16_THEME
 endif
 
-let base16colorspace=256
-colorscheme base16-eighties
-let g:airline_theme='base16_eighties'
 
 " fix background when running in termite (and screen/tmux?)
 set t_ut=
