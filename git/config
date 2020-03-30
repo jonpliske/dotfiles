@@ -1,6 +1,3 @@
-[user]
-	name = Jonathan Pliske
-	email = jonpliske@gmail.com
 [color]
 	ui = auto
 [alias]
@@ -8,11 +5,17 @@
 [core]
 	editor = /usr/bin/vim
 	excludesFile = ~/.config/git/ignore
+[gpg]
+	program = qubes-gpg-client-wrapper
 [push]
 	default = simple
 [status]
 	submoduleSummary = true
+[includeIf "gitdir:~/src/"]
+	path = ~/.config/git/gitconfig-personal
+[includeIf "gitdir:~/code/"]
+	path = ~/.config/git/gitconfig-personal
 [includeIf "gitdir:~/work/"]
-	path = .gitconfig-work
+	path = ~/.config/git/gitconfig-work
 [includeIf "gitdir:~/go/src/groupon.github.com/"]
-	path = .gitconfig-work
+	path = ~/.config/git/gitconfig-work
