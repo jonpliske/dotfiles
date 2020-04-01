@@ -1,3 +1,5 @@
+export AWS_DEFAULT_REGION=us-west-2
+
 # AWS CLI aliases
 alias avpcd="aws ec2 describe-vpcs"
 alias avpcdd="avpcd --filters 'Name=isDefault,Values=true'"
