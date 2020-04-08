@@ -22,12 +22,15 @@ Plug 'Matt-Deacalion/vim-systemd-syntax'
 Plug 'fatih/vim-hclfmt'
 Plug 'godlygeek/tabular'
 Plug 'hashivim/vim-terraform'
+Plug 'cespare/vim-toml'
 
 if has('nvim')
     Plug 'Shougo/deoplete.nvim'
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'deoplete-plugins/deoplete-docker'
+    Plug 'deoplete-plugins/deoplete-clang'
     Plug 'deoplete-plugins/deoplete-zsh'
+    Plug 'racer-rust/vim-racer'
 endif
 
 call plug#end()
