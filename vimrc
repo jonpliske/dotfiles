@@ -1,43 +1,41 @@
 set nocompatible
 filetype off
 
-" set runtime path to include Vundle
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-" vundle the Vundle vundlers
-Plugin 'VundleVim/Vundle.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'mileszs/ack.vim'
+Plug 'derekwyatt/vim-scala'
+Plug 'chriskempson/base16-vim'
+Plug 'mhinz/vim-sayonara'
+Plug 'fatih/vim-go'
+Plug 'Raimondi/delimitMate'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'Matt-Deacalion/vim-systemd-syntax'
+Plug 'fatih/vim-hclfmt'
+Plug 'godlygeek/tabular'
+Plug 'hashivim/vim-terraform'
 
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'chriskempson/base16-vim'
-Plugin 'mhinz/vim-sayonara'
-Plugin 'fatih/vim-go'
-Plugin 'Raimondi/delimitMate'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'Matt-Deacalion/vim-systemd-syntax'
-Plugin 'fatih/vim-hclfmt'
-Plugin 'godlygeek/tabular'
-Plugin 'elmcast/elm-vim'
-Plugin 'hashivim/vim-terraform'
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim'
+    Plug 'deoplete-plugins/deoplete-jedi'
+    Plug 'deoplete-plugins/deoplete-docker'
+    Plug 'deoplete-plugins/deoplete-zsh'
+endif
+
+call plug#end()
+
 
 let g:python_host_prog = $HOME . '/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
 
-if has('nvim')
-    Plugin 'Shougo/deoplete.nvim'
-endif
-
-call vundle#end()
 filetype plugin indent on
 
 " from: http://github.com/jessfraz/.vim/blob/master/vimrc
