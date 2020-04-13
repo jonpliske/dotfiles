@@ -22,6 +22,7 @@ Plug 'Matt-Deacalion/vim-systemd-syntax'
 Plug 'fatih/vim-hclfmt'
 Plug 'godlygeek/tabular'
 Plug 'hashivim/vim-terraform'
+Plug 'rust-lang/rust.vim'
 Plug 'cespare/vim-toml'
 
 if has('nvim')
@@ -31,6 +32,7 @@ if has('nvim')
     Plug 'deoplete-plugins/deoplete-clang'
     Plug 'deoplete-plugins/deoplete-zsh'
     Plug 'racer-rust/vim-racer'
+    Plug 'neomake/neomake'
 endif
 
 call plug#end()
@@ -38,6 +40,10 @@ call plug#end()
 
 let g:python_host_prog = $HOME . '/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
+
+" TODO replace this with something that checks for battery power
+" see: https://github.com/neomake/neomake#advanced-setup
+call neomake#configure#automake('w')
 
 filetype plugin indent on
 
@@ -130,7 +136,7 @@ if !&sidescrolloff
 endif
 set display+=lastline
 
-" CTRL-U in insert mode deletes a lot.	Use CTRL-G u to first break undo,
+" CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
