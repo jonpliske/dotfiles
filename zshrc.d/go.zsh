@@ -1,5 +1,6 @@
 export GOPATH="${HOME}/go"
+export GOBIN="${HOME}/go/bin"
 
 typeset -U path
-path+=$GOPATH/bin
+path+=$GOBIN
 path+=/usr/local/go/bin

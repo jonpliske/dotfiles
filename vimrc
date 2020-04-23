@@ -444,6 +444,18 @@ let g:cfmt_style = '-linux'
 "let g:linuxsty_patterns = ['/usr/src/', '/linux']
 
 " ==================== Vim-go ====================
+
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
 let g:go_fmt_fail_silently = 0
 let g:go_fmt_command = "goimports"
 let g:go_autodetect_gopath = 1
@@ -456,6 +468,9 @@ let g:go_highlight_extra_types = 0
 let g:go_highlight_operators = 0
 let g:go_highlight_build_constraints = 1
 
+let g:go_textobj_include_function_doc = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
@@ -464,7 +479,7 @@ au FileType go nmap <Leader>l <Plug>(go-metalinter)
 
 au FileType go nmap <leader>r  <Plug>(go-run)
 
-au FileType go nmap <leader>b  <Plug>(go-build)
+"au FileType go nmap <leader>b  <Plug>(go-build)
 au FileType go nmap <leader>t  <Plug>(go-test)
 au FileType go nmap <leader>dt  <Plug>(go-test-compile)
 au FileType go nmap <Leader>d <Plug>(go-doc)
@@ -549,6 +564,9 @@ if has('nvim')
   let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
   let g:deoplete#sources#go#align_class = 1
 
+  call deoplete#custom#option('omni_patterns', {
+  \ 'go': '[^. *\t]\.\w*',
+  \})
 
   " Use partial fuzzy matches like YouCompleteMe
   call deoplete#custom#source('_', 'matchers', ['matcher_fuzzy'])
