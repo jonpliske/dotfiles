@@ -31,6 +31,7 @@ if has('nvim')
     Plug 'deoplete-plugins/deoplete-docker'
     Plug 'deoplete-plugins/deoplete-clang'
     Plug 'deoplete-plugins/deoplete-zsh'
+    Plug 'takkii/Bignyanco'
     Plug 'racer-rust/vim-racer'
     Plug 'neomake/neomake'
 endif
@@ -339,6 +340,7 @@ au BufNewFile,BufRead *.cpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.hpp setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.json setlocal expandtab ts=2 sw=2
 au BufNewFile,BufRead *.tf,*.tfvars setlocal expandtab ts=2 sw=2
+au BufNewFile,BufRead *.rb setlocal expandtab ts=2 sw=2
 
 augroup filetypedetect
   au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
