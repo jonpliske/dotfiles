@@ -15,6 +15,8 @@
 	submoduleSummary = true
 [includeIf "gitdir:~/src/"]
 	path = ~/.config/git/gitconfig-personal
+[includeIf "gitdir:~/go/"]
+	path = ~/.config/git/gitconfig-personal
 [includeIf "gitdir:~/code/"]
 	path = ~/.config/git/gitconfig-personal
 [includeIf "gitdir:~/work/"]

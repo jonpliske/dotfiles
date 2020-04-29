@@ -471,6 +471,8 @@ let g:go_highlight_build_constraints = 1
 let g:go_textobj_include_function_doc = 1
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
+let g:neomake_go_enabled_makers = ['go']
+let g:deoplete#sources#go = 'vim-go'
 
 au FileType go nmap <Leader>s <Plug>(go-def-split)
 au FileType go nmap <Leader>v <Plug>(go-def-vertical)
@@ -564,6 +566,7 @@ if has('nvim')
   let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
   let g:deoplete#sources#go#align_class = 1
 
+  set completeopt+=noselect
   call deoplete#custom#option('omni_patterns', {
   \ 'go': '[^. *\t]\.\w*',
   \})
