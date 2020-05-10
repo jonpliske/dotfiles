@@ -212,6 +212,9 @@ let g:mapleader = ","
 " Force quickfix window to bottom
 autocmd FileType qf wincmd J
 
+" close all location lists and quickfix
+nmap <F11> :windo lcl\|ccl<CR>
+
 " Some useful quickfix shortcuts
 ":cc      see the current error
 ":cn      next error
