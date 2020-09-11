@@ -3,7 +3,7 @@
 export EDITOR="nvim"
 
 if [[ -d $HOME/.zfunc ]]; then
-    fpath+=~/.zfunc
+	fpath+=(~/.zfunc ~/src/pure)
 fi
 
 if [ -d $HOME/.zshrc.d ]; then
@@ -26,5 +26,8 @@ fi
 # apple silicon (brew) zsh-syntax-highlighting
 [[ -s /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
     . /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# alternative os x (brew) zsh-syntax-highlighting
+[[ -s /opt/brew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+    . /opt/brew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [[ :$PATH: == *:$HOME/bin:* ]] || PATH=$HOME/bin:$PATH
