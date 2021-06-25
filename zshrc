@@ -1,5 +1,7 @@
 [[ -s /etc/profile.d/autojump.zsh ]] && . /etc/profile.d/autojump.zsh
 
+export EDITOR="nvim"
+
 if [[ -d $HOME/.zfunc ]]; then
     fpath+=~/.zfunc
 fi
@@ -22,3 +24,4 @@ fi
 [[ -s /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
     . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+[[ :$PATH: == *:$HOME/bin:* ]] || PATH=$HOME/bin:$PATH

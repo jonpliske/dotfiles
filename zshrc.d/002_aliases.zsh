@@ -11,6 +11,7 @@ alias gdic="g diff --cached"
 alias gf="g fetch"
 alias gcm="g checkout master"
 alias gcb="g checkout -b"
+alias ggr="g grep -n"
 
 alias curli="curl -s -i"
 alias curnul="curl -s -v -o /dev/null"

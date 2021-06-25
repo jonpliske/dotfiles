@@ -1,7 +1,7 @@
 [user]
     name = Jonathan Pliske
-    email = jonathan@pliske.io
+    email = jonpliske@gmail.com
     signingkey=F59F4CE3D05BEF24EBEAADE2E28376722F8A9527
 [commit]
-    gpgsign=true
+    gpgsign=false
 

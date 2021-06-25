@@ -1,6 +1,5 @@
 [user]
     name = Jonathan Pliske
-    email = jpliske@groupon.com
-    signingkey=3D81A2CB03BBFCA9566B2D14DA0051622E15A4F4
+    email = j@microfacebananabird.com
 [commit]
-    gpgsign=true
+    gpgsign=false

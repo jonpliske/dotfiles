@@ -29,10 +29,7 @@ if has('nvim')
     Plug 'Shougo/deoplete.nvim'
     Plug 'deoplete-plugins/deoplete-jedi'
     Plug 'deoplete-plugins/deoplete-docker'
-    Plug 'deoplete-plugins/deoplete-clang'
     Plug 'deoplete-plugins/deoplete-zsh'
-    Plug 'takkii/Bignyanco'
-    Plug 'racer-rust/vim-racer'
     Plug 'neomake/neomake'
 endif
 
@@ -564,12 +561,13 @@ autocmd BufWritePre * StripWhitespace
 " use deoplete for Neovim.
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
-  let g:deoplete#ignore_sources = {}
-  let g:deoplete#ignore_sources._ = ['buffer', 'member', 'tag', 'file', 'neosnippet']
   let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
   let g:deoplete#sources#go#align_class = 1
 
   set completeopt+=noselect
+  call deoplete#custom#option('ignore_sources', {
+  \ '_': ['buffer', 'member', 'tag', 'file', 'neosnippet'],
+  \})
   call deoplete#custom#option('omni_patterns', {
   \ 'go': '[^. *\t]\.\w*',
   \})
@@ -579,6 +577,10 @@ if has('nvim')
   call deoplete#custom#source('_', 'converters', ['converter_remove_paren'])
   call deoplete#custom#source('_', 'disabled_syntaxes', ['Comment', 'String'])
 endif
+
+" =================== Terminal ======================
+" terminal-mode mappings
+:tnoremap <Esc> <C-\><C-n>
 
 " vim:ts=2:sw=2:et
 
