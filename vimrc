@@ -191,7 +191,7 @@ endif
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
-  let g:airline_theme = 'base16_' . $BASE16_THEME
+  let g:airline_theme = 'base16_' . substitute($BASE16_THEME, "-", "_", "g")
 endif
 
 
