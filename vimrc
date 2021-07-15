@@ -582,5 +582,16 @@ endif
 " terminal-mode mappings
 :tnoremap <Esc> <C-\><C-n>
 
+ " ======= crow / lua / norns =======
+
+ " crow websocket bindings
+ " ...requires websocat + connected USB to crow
+
+ " execute current line
+ map <C-\> :silent .w !websocat ws://localhost:6666 -1<CR>
+ " execute highlighted lines
+ vmap <F5> :w<Home>silent <End> !sed -e '1i\```' -e '$a\```' <bar> websocat ws://localhost:6666<CR>
+
+
 " vim:ts=2:sw=2:et
 
