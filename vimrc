@@ -41,7 +41,7 @@ let g:python3_host_prog = $HOME . '/.pyenv/versions/neovim3/bin/python'
 
 " TODO replace this with something that checks for battery power
 " see: https://github.com/neomake/neomake#advanced-setup
-call neomake#configure#automake('w')
+"call neomake#configure#automake('w')
 
 filetype plugin indent on
 
