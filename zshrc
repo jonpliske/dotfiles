@@ -23,5 +23,10 @@ fi
 # os x (brew) zsh-syntax-highlighting
 [[ -s /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
     . /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# apple silicon (brew) zsh-syntax-highlighting
+[[ -s /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && \
+    . /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [[ :$PATH: == *:$HOME/bin:* ]] || PATH=$HOME/bin:$PATH
+
+alias luamake=/Users/jbp/src/lua-language-server/3rd/luamake/luamake
