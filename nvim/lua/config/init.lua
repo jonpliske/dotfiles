@@ -1,4 +1,7 @@
 require('config.colorscheme')
 require('config.completion')
+require('config.compe')
 require('config.fugitive')
 require('config.nvim-comment')
+require('config.treesitter')
+require('config.statusline')

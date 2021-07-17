@@ -1,6 +1,11 @@
 -- Your custom attach function for nvim-lspconfig goes here.
-local on_attach = function(client, bufnr)
-    require('completion').on_attach()
+local on_attach = function(_, bufnr)
+    require('lsp_signature').on_attach({
+        bind = true,
+        hander_opts = {
+            border = 'single'
+        }
+    })
 
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end

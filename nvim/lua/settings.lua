@@ -25,7 +25,6 @@ vim.opt.autoread = true
 vim.opt.hidden = true
 
 vim.opt.ruler = true
-
 cmd 'au FocusLost * :wa'
 
 vim.opt.fileformats='unix,dos,mac'
@@ -86,23 +85,6 @@ if vim.opt.tabpagemax:get() < 50 then
     vim.opt.tabpagemax = 50
 end
 
-vim.opt.display:append {'lastline'}
---vim.opt.statusline = '%-F %-r %-m %= %{&fileencoding} | %y | %3.l/%3.L:%3.c'
-vim.opt.statusline = '%<%1*%f%*'                                       -- full path
-vim.opt.statusline:append('%( %7*%m%*%2*%h%r%*%)')                     -- modified, help, and readonly flag
---vim.opt.statusline:append('%( %4*%{v:lua.linter_status()}%*%)')        -- lint status
---vim.opt.statusline:append('%( %3*%{FugitiveHead()}%*%)')               -- git branch
---vim.opt.statusline:append('%( %6*%{v:lua.git_status()}%*%)')           -- git hunk status
---vim.opt.statusline:append('%( %5*%{ObsessionStatus()}%*%)')            -- session tracking
-vim.opt.statusline:append('%=%6*%y%*')                                 -- file type
-vim.opt.statusline:append(' %3*%l%*')                                  -- current line
-vim.opt.statusline:append('%8*/%L%*')                                  -- total lines
-vim.opt.statusline:append('%3*%4v%*')                                  -- virtual column number
-
---
---" CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo,
---" so that you can undo CTRL-U after inserting a line break.
---inoremap <C-U> <C-G>u<C-U>
 
 if vim.fn.has('mouse') then
     vim.opt.mouse = 'a'
@@ -117,5 +99,6 @@ end
 -- Force quickfix window to bottom
 cmd 'autocmd FileType qf wincmd J'
 
--- close all location lists and quickfix
--- nmap <F11> :windo lcl\|ccl<CR>
+-- Highlight on yank
+cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
+

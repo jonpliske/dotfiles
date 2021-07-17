@@ -69,9 +69,30 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["completion-nvim"] = {
+  ["BetterLua.vim"] = {
     loaded = true,
-    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/BetterLua.vim"
+  },
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
+  ["galaxyline.nvim"] = {
+    config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22config.statusline\frequire\0" },
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
+  ["lsp_signature.nvim"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
+  },
+  ["lua-dev.nvim"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
   },
   ["nlua.nvim"] = {
     loaded = true,
@@ -86,6 +107,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -94,9 +119,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
-  ["packer.nvim"] = {
+  ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  ["packer.nvim"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+  },
+  playground = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/playground"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -106,9 +148,17 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/trouble.nvim"
   },
   ["vim-dispatch"] = {
     loaded = true,
@@ -117,14 +167,31 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
+  ["which-key.nvim"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: galaxyline.nvim
+time([[Config for galaxyline.nvim]], true)
+try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22config.statusline\frequire\0", "config", "galaxyline.nvim")
+time([[Config for galaxyline.nvim]], false)
 -- Config for: nvim-comment
 time([[Config for nvim-comment]], true)
 require('config.nvim-comment')
 time([[Config for nvim-comment]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
