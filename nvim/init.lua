@@ -17,5 +17,6 @@ end
 vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile'
 
 require('plugins')
+require('lsp_lua')
 require('config')
 require('keymappings')
