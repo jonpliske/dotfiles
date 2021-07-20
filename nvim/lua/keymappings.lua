@@ -116,7 +116,6 @@ utils.map('n', '<C-m>', ':cp<CR>')
 -- nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 -- utils.map('<leader>W', [[:%s/\s\+$//<cr>:let @/=''<CR>]])
 cmd [[
-nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 ]]
 
 -- =================== Terminal ======================
@@ -128,6 +127,9 @@ utils.map('t', '<Esc>', '<C-\\><C-n>')
 -- Oldies but goodies?
 -- TODO port vimscript in mappings
 vim.api.nvim_exec([[
+
+nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
+
 " CTRL-U in insert mode deletes a lot. Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
