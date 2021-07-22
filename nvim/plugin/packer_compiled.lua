@@ -73,9 +73,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/BetterLua.vim"
   },
-  LuaSnip = {
+  ["friendly-snippets"] = {
     loaded = true,
-    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/LuaSnip"
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/friendly-snippets"
   },
   ["galaxyline.nvim"] = {
     config = { "\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22config.statusline\frequire\0" },
@@ -86,6 +86,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim"
   },
+  ["lspkind-nvim"] = {
+    config = { "\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\tinit\flspkind\frequire\0" },
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lspkind-nvim"
+  },
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
@@ -94,9 +99,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/lua-dev.nvim"
   },
+  neoformat = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/neoformat"
+  },
   ["nlua.nvim"] = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nlua.nvim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\vmap_cr\2\17map_complete\2\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-base16.lua"] = {
     loaded = true,
@@ -148,6 +162,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["python-snippets"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/python-snippets"
+  },
   ["symbols-outline.nvim"] = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim"
@@ -157,8 +175,13 @@ _G.packer_plugins = {
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
   ["trouble.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0" },
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/trouble.nvim"
+  },
+  ["vim-better-whitespace"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vim-better-whitespace"
   },
   ["vim-dispatch"] = {
     loaded = true,
@@ -172,6 +195,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vim-surround"
   },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["vscode-go"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vscode-go"
+  },
+  ["vscode-javascript"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vscode-javascript"
+  },
+  ["vscode-python-snippet-pack"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vscode-python-snippet-pack"
+  },
+  ["vscode-rust"] = {
+    loaded = true,
+    path = "/Users/jbp/.local/share/nvim/site/pack/packer/start/vscode-rust"
+  },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
     loaded = true,
@@ -180,6 +223,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
+-- Config for: nvim-autopairs
+time([[Config for nvim-autopairs]], true)
+try_loadstring("\27LJ\2\nY\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\2\vmap_cr\2\17map_complete\2\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
+time([[Config for nvim-autopairs]], false)
+-- Config for: trouble.nvim
+time([[Config for trouble.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
+time([[Config for trouble.nvim]], false)
 -- Config for: galaxyline.nvim
 time([[Config for galaxyline.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\22config.statusline\frequire\0", "config", "galaxyline.nvim")
@@ -188,10 +243,10 @@ time([[Config for galaxyline.nvim]], false)
 time([[Config for nvim-comment]], true)
 require('config.nvim-comment')
 time([[Config for nvim-comment]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
+-- Config for: lspkind-nvim
+time([[Config for lspkind-nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\tinit\flspkind\frequire\0", "config", "lspkind-nvim")
+time([[Config for lspkind-nvim]], false)
 if should_profile then save_profiles() end
 
 end)

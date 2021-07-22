@@ -2,8 +2,8 @@
 local on_attach = function(_, bufnr)
     require('lsp_signature').on_attach({
         bind = true,
-        hander_opts = {
-            border = 'single'
+        handler_opts = {
+            border = 'shadow'
         }
     })
 
@@ -25,8 +25,19 @@ local on_attach = function(_, bufnr)
 
 end
 
--- To get builtin LSP running, do something like:
--- NOTE: This replaces the calls where you would have before done `require('nvim_lsp').sumneko_lua.setup()`
+-- Configure LSP to use built-in nvim lua language server
 require('nlua.lsp.nvim').setup(require('lspconfig'), {
-  on_attach = on_attach,
+    on_attach = on_attach,
+    globals = {
+        -- Norns
+        'engine', 'grid', 'params', 'screen', 'crow',
+        '_menu', '_norns', '_path', '_startup', 'arc', 'audio', 'cleanup',
+        'clock', 'controlspec', 'coroutine', 'crow', 'debug', 'enc', 'engine',
+        'grid', 'hid', 'include', 'inf', 'key', 'metro', 'midi', 'mix',
+        'norns', 'osc', 'package', 'params', 'paramset', 'paths', 'poll',
+        'redraw', 'screen', 'softcut', 'string', 'tab', 'util', 'wifi',
+
+        -- crow
+        'init', 'tell', 'quote', 'unique_id', 'cputime', 'justvolts', 'just12', 'hztovolts'
+    }
 })

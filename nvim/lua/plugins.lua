@@ -9,6 +9,17 @@ return packer.startup(function()
     -- dev
     use 'tpope/vim-surround'
     use 'tpope/vim-fugitive'
+    use 'nvim-lua/plenary.nvim'
+    use {
+        'windwp/nvim-autopairs',
+        config = function()
+            require('nvim-autopairs').setup({
+                map_cr = true, --  map <CR> on insert mode
+                map_complete = true -- it will auto insert `(` after select function or method item
+            })
+        end,
+    }
+
     use "folke/lua-dev.nvim"
     use {
         "folke/trouble.nvim",
@@ -21,7 +32,8 @@ return packer.startup(function()
         'folke/which-key.nvim',
         config = function() require("which-key").setup {} end
     }
-    -- use 'L3MON4D3/LuaSnip'
+
+    use 'ntpeters/vim-better-whitespace'
 
     -- colors
     use 'siduck76/nvim-base16.lua'

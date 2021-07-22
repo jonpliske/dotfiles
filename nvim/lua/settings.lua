@@ -1,7 +1,4 @@
-local utils = require('utils')
-
 local cmd = vim.cmd
-local indent = 2
 
 cmd 'syntax enable'
 cmd 'filetype plugin indent on'
@@ -57,7 +54,6 @@ vim.opt.textwidth = 79
 vim.opt.formatoptions = 'qrn1'
 
 vim.opt.autoindent = true
-vim.opt.complete:append {'i'}
 vim.opt.showmatch = true
 vim.opt.smarttab = true
 

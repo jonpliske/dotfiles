@@ -2,6 +2,34 @@ local gl = require('galaxyline')
 local colors = require('config.colorscheme').galaxyline_colors()
 local condition = require('galaxyline.condition')
 local gls = gl.section
+
+local function fileFullPath()
+	local path = vim.fn.expand('%:p')
+    return path
+end
+
+local mode_map = {
+	['n'] = 'normal',
+	['no'] = 'n·operator pending',
+	['v'] = 'visual',
+	['V'] = 'v·line',
+	[''] = 'v·block',
+	['s'] = 'select',
+	['S'] = 's·line',
+	[''] = 's·block',
+	['i'] = 'insert',
+	['R'] = 'replace',
+	['Rv'] = 'v·replace',
+	['c'] = 'command',
+	['cv'] = 'vim ex',
+	['ce'] = 'ex',
+	['r'] = 'prompt',
+	['rm'] = 'more',
+	['r?'] = 'confirm',
+	['!'] = 'shell',
+	['t'] = 'terminal'
+}
+
 gl.short_line_list = {'NvimTree','vista','dbui','packer'}
 
 gls.left[1] = {
@@ -28,7 +56,7 @@ gls.left[2] = {
                           rm = colors.cyan, ['r?'] = colors.cyan,
                           ['!']  = colors.red,t = colors.red}
       vim.api.nvim_command('hi GalaxyViMode guifg='..mode_color[vim.fn.mode()])
-      return ' '..vim.fn.mode()..' '
+      return ' '..mode_map[vim.fn.mode()]..' '
     end,
     highlight = {colors.red,colors.bg,'bold'},
     separator = '  ',
@@ -89,24 +117,13 @@ gls.left[7] = {
 }
 
 gls.mid[1] = {
-  FancyPants = {
-    provider = function() return '  ' end,
-    highlight = {colors.bg, colors.darkgrey, 'bold'},
-    separator = '  ',
-    separator_highlight = {
-        colors.darkgrey,
-        colors.bg,
-    },
-  }
-}
-gls.mid[2] = {
   DiagnosticError = {
     provider = 'DiagnosticError',
     icon = '  ',
     highlight = {colors.red,colors.bg},
   }
 }
-gls.mid[3] = {
+gls.mid[2] = {
   DiagnosticWarn = {
     provider = 'DiagnosticWarn',
     icon = '  ',
@@ -114,7 +131,7 @@ gls.mid[3] = {
   }
 }
 
-gls.mid[4] = {
+gls.mid[3] = {
   DiagnosticHint = {
     provider = 'DiagnosticHint',
     icon = '  ',
@@ -122,7 +139,7 @@ gls.mid[4] = {
   }
 }
 
-gls.mid[5] = {
+gls.mid[4] = {
   DiagnosticInfo = {
     provider = 'DiagnosticInfo',
     icon = '  ',
@@ -130,18 +147,14 @@ gls.mid[5] = {
   }
 }
 
-gls.mid[6] = {
+gls.mid[5] = {
   ShowLspClient = {
     provider = 'GetLspClient',
     condition = function ()
-      local tbl = {['dashboard'] = true,['']=true}
-      if tbl[vim.bo.filetype] then
-        return false
-      end
-      return true
+        return (not condition.check_active_lsp())
     end,
     icon = ' :',
-    highlight = {colors.cyan,colors.bg},
+    highlight = {colors.cyan,colors.darkgrey},
   }
 }
 
@@ -226,7 +239,7 @@ gls.short_line_left[1] = {
 
 gls.short_line_left[2] = {
   SFileName = {
-    provider =  'FileName',
+    provider =  fileFullPath,
     condition = condition.buffer_not_empty,
     highlight = {colors.fg,colors.bg,'bold'}
   }
