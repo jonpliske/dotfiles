@@ -28,5 +28,3 @@ fi
     . /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [[ :$PATH: == *:$HOME/bin:* ]] || PATH=$HOME/bin:$PATH
-
-alias luamake=/Users/jbp/src/lua-language-server/3rd/luamake/luamake
