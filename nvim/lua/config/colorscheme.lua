@@ -4,12 +4,16 @@ local utils = require('utils')
 utils.opt('o', 'termguicolors', true)
 vim.o.background = "dark"
 
+
 -- load base16
 local base16 = require 'base16'
 
 -- use same theme configured by base16-shell
 local theme = base16.themes[vim.env.BASE16_THEME or "3024"]
 base16(theme, true)
+
+-- allow transparency
+vim.cmd('hi Normal guibg=NONE ctermbg=NONE')
 
 local theme_names = base16.theme_names()
 BASE16_POSITION = 1
