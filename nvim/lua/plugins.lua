@@ -36,7 +36,7 @@ return packer.startup(function()
     use 'ntpeters/vim-better-whitespace'
 
     -- colors
-    use 'siduck76/nvim-base16.lua'
+    use 'norcalli/nvim-base16.lua'
     use {
         'glepnir/galaxyline.nvim',
         branch = 'main',
@@ -48,12 +48,29 @@ return packer.startup(function()
 }
 
     -- the tree
-    use 'kyazdani42/nvim-tree.lua'
-
+    use {'kyazdani42/nvim-tree.lua',
+         config = function()
+           require('nvim-tree').setup {
+                open_on_setup = true,
+                open_file = {
+                    quit_on_open = true
+                },
+                autoclose = true,
+                filters = {
+                    custom = { '.git', 'node_modules', '.cache' }
+                },
+                disable_netrw = true,
+                hijack_netrw = true,
+                update_to_buf_dif = {
+                    enable = false
+             }
+           }
+         end
+}
     -- Fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+        requires = { {'nvim-lua/plenary.nvim'} }
     }
 
     -- LSP and completion

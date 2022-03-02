@@ -15,6 +15,7 @@ window:
   dynamic_padding: false
   decorations: full
   startup_mode: Windowed
+  opacity: 0.95
 
 font:
   normal:
@@ -47,7 +48,6 @@ font:
   use_thin_strokes: true
 
 draw_bold_text_with_bright_colors: false
-background_opacity: 0.95
 
 # Shell
 #

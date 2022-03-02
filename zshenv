@@ -4,3 +4,4 @@ export EDITOR=nvim
 typeset -U path
 path=(~/bin /usr/local/bin $path[@])
 
+. "$HOME/.cargo/env"
