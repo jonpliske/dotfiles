@@ -2,7 +2,7 @@ local utils = require('utils')
 
 -- cargo-culted magic that may not be necessary
 utils.opt('o', 'termguicolors', true)
-vim.o.background = "dark"
+-- vim.o.background = "light"
 
 
 -- load base16

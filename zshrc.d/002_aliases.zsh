@@ -42,3 +42,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias ls="nocorrect exa"
 alias ll="ls -al"
 alias mkdir="mkdir -p"
+
+alias shpretty="sed 's/--/\\\r\n &/g'"
+
+alias redot="source ~/.zshrc"
