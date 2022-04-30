@@ -1,4 +1,3 @@
--- map leader to space
 vim.g.mapleader = ','
 
 local fn = vim.fn
