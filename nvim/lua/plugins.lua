@@ -52,18 +52,12 @@ return packer.startup(function()
          config = function()
            require('nvim-tree').setup {
                 open_on_setup = true,
-                open_file = {
-                    quit_on_open = true
-                },
-                autoclose = true,
                 filters = {
                     custom = { '.git', 'node_modules', '.cache' }
                 },
                 disable_netrw = true,
                 hijack_netrw = true,
-                update_to_buf_dif = {
-                    enable = false
-             }
+                nvim_tree_indent_markers = true
            }
          end
 }
