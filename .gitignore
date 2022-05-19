@@ -3,3 +3,6 @@
 .DS_Store
 
 packer_compiled.lua
+*_compiled.lua
+
+.python-version
