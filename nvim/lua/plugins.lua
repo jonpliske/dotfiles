@@ -38,7 +38,7 @@ return packer.startup(function()
     -- colors
     use 'norcalli/nvim-base16.lua'
     use {
-        'glepnir/galaxyline.nvim',
+        'NTBBloodbath/galaxyline.nvim',
         branch = 'main',
         -- your statusline
         config = function() require'config.statusline' end,
@@ -57,7 +57,16 @@ return packer.startup(function()
                 },
                 disable_netrw = true,
                 hijack_netrw = true,
-                nvim_tree_indent_markers = true
+                renderer = {
+                    indent_markers = {
+                        enable = true,
+                        icons = {
+                            corner = "└",
+                            edge = "│ ",
+                            none = " ",
+                        }
+                    }
+                }
            }
          end
 }
